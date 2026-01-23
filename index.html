@@ -97,8 +97,31 @@
       text-decoration:none;
       color: var(--ink);
     }
-
     .cta{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+.social{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:42px;
+  height:42px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.75);
+  box-shadow: var(--shadow2);
+  transition: all .2s ease;
+}
+.social svg{
+  width:20px;
+  height:20px;
+  fill: var(--ink);
+}
+.social:hover{
+  background:#fff;
+  transform: translateY(-1px);
+}
+.social.linkedin svg{fill:#0A66C2;}
+.social.instagram svg{fill:#C13584;}
+
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       padding:10px 14px;
@@ -324,11 +347,22 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <div class="cta">
-        <a class="btn" href="https://www.linkedin.com/in/jean-michel-brulé-33a303209" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="https://www.instagram.com/bociteart" target="_blank" rel="noopener">Instagram</a>
-        <a class="btn primary" href="#contact">Me contacter</a>
-      </div>
+    <div class="cta">
+  <a class="social linkedin" href="https://www.linkedin.com/in/jean-michel-brulé-33a303209" target="_blank" rel="noopener" aria-label="LinkedIn Bo’CitéArt">
+    <svg viewBox="0 0 24 24">
+      <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4v16h-4zM8 8h3.8v2.2h.1c.5-1 1.9-2.2 3.9-2.2 4.2 0 5 2.8 5 6.4V24h-4v-8.6c0-2-.04-4.6-2.8-4.6-2.8 0-3.2 2.2-3.2 4.4V24h-4z"/>
+    </svg>
+  </a>
+
+  <a class="social instagram" href="https://www.instagram.com/bociteart" target="_blank" rel="noopener" aria-label="Instagram Bo’CitéArt">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.3 2.3.5.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.5 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.9-.5 2.3-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.3.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.3-2.3-.5-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.5-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.9.5-2.3.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.3-.5C8.4 2.2 8.8 2.2 12 2.2zm0 3.3a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zm0 10.7a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4zm6.8-11.3a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+    </svg>
+  </a>
+
+  <a class="btn primary" href="#contact">Me contacter</a>
+</div>
+
     </div>
   </header>
 
