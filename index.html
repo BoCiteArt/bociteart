@@ -3,632 +3,264 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bo’CitéArt — Réinventer la ville, ensemble</title>
-  <meta name="description" content="Bo’CitéArt : projet territorial et artistique pour relier citoyens, commerces, écoles, associations et collectivités — et redonner envie de vivre le local." />
-  <meta name="author" content="Jean-Michel Brulé" />
-  <meta name="robots" content="index,follow" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Bo’CitéArt — Réinventer la ville, ensemble" />
-  <meta property="og:description" content="Relier citoyens, commerces et villes par le lien, le civisme et l’envie locale." />
-  <meta property="og:locale" content="fr_FR" />
-
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Conditions Générales d’Utilisation (CGU) — Bo’CitéArt</title>
   <style>
-    :root{
-      /* Fond beige neutre (moins verdâtre) */
-      --bg: #f7f1e8;
-      --bg2:#fbf6ef;
-
-      --ink:#161616;
-      --muted:#3f3f3f;
-      --muted2:#5b5b5b;
-
-      --line:#e6dfd4;
-
-      /* Couleurs marque */
-      --green:#1f7a3a;
-      --green2:#2a8a45;
-      --red:#b3261e;
-      --red2:#c62828;
-
-      --shadow: 0 14px 40px rgba(0,0,0,.08);
-      --shadow2: 0 8px 22px rgba(0,0,0,.06);
-
-      --radius: 18px;
-      --radius2: 26px;
-      --max: 1120px;
-
-      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: var(--font);
-      background: var(--bg);
-      color: var(--ink);
-      line-height:1.5;
-    }
-    a{color:inherit; text-decoration:none}
-    a:hover{text-decoration:underline}
-
-    .wrap{max-width:var(--max); margin:0 auto; padding:20px}
-
-    /* Barre haute */
-    .top{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(10px);
-      background: rgba(247,241,232,.90);
-      border-bottom:1px solid var(--line);
-    }
-    .top .wrap{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:14px;
-    }
-
-    .brand{display:flex; align-items:center; gap:12px; min-width: 240px}
-    .logo{
-      width:44px; height:44px; border-radius:14px;
-      background: #fff;
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow2);
-      overflow:hidden;
-      display:grid; place-items:center;
-    }
-    .brand b{display:block; font-size:14px}
-    .brand small{display:block; color:var(--muted2); margin-top:2px; font-size:12px}
-
-    nav{display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end}
-    nav a{
-      color:var(--muted2);
-      font-size:13px;
-      padding:9px 10px;
-      border-radius:12px;
-      border:1px solid transparent;
-      background: transparent;
-    }
-    nav a:hover{
-      border-color:var(--line);
-      background: rgba(255,255,255,.70);
-      text-decoration:none;
-      color: var(--ink);
-    }
-    .cta{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
-.social{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:42px;
-  height:42px;
-  border-radius:14px;
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.75);
-  box-shadow: var(--shadow2);
-  transition: all .2s ease;
-}
-.social svg{
-  width:20px;
-  height:20px;
-  fill: var(--ink);
-}
-.social:hover{
-  background:#fff;
-  transform: translateY(-1px);
-}
-.social.linkedin svg{fill:#0A66C2;}
-.social.instagram svg{fill:#C13584;}
-
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 14px;
-      border-radius:14px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.80);
-      color: var(--ink);
-      font-weight:800;
-      font-size:13px;
-      box-shadow: var(--shadow2);
-      white-space:nowrap;
-    }
-    .btn:hover{background:#fff; text-decoration:none}
-
-    /* Bouton principal vert (comme avant) */
-    .btn.primary{
-      background: var(--green);
-      border-color: var(--green);
-      color:#fff;
-      box-shadow: 0 16px 40px rgba(31,122,58,.18);
-    }
-    .btn.primary:hover{background: var(--green2); border-color: var(--green2)}
-
-    /* Bouton accent rouge (optionnel) */
-    .btn.red{
-      color: var(--red);
-      border-color: rgba(179,38,30,.22);
-      background: rgba(255,255,255,.80);
-    }
-    .btn.red:hover{background:#fff}
-
-    /* HERO */
-    .hero{padding:22px 0 10px}
-
-    /* 2 colonnes sur écran large (paysage), 1 colonne sur mobile */
-    .heroGrid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:14px;
-      align-items:stretch;
-    }
-
-    .panel{
-      background: rgba(251,246,239,.92);
-      border:1px solid var(--line);
-      border-radius: var(--radius2);
-      box-shadow: var(--shadow);
-      padding: 20px;
-      overflow:hidden;
-    }
-
-    .kicker{
-      display:inline-flex; align-items:center; gap:10px;
-      color:var(--muted2);
-      font-size:13px;
-      font-weight:900;
-    }
-    .dot{
-      width:9px; height:9px; border-radius:999px;
-      background: var(--red);
-      box-shadow:0 0 0 6px rgba(179,38,30,.12);
-    }
-
-    h1{margin:12px 0 10px; font-size:36px; line-height:1.08; letter-spacing:-.6px}
-    .lead{color:var(--muted2); font-size:16px; max-width: 70ch; margin:0}
-
-    .heroActions{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
-
-    .pillRow{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
-    .pill{
-      font-size:12px; color:var(--muted2);
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.86);
-      padding:8px 10px; border-radius:999px;
-      display:inline-flex; gap:8px; align-items:center;
-    }
-    .pill i{width:8px; height:8px; border-radius:999px; background: rgba(31,122,58,.25)}
-
-    /* Colonne résumé */
-    .side{
-      background: rgba(251,246,239,.92);
-      border:1px solid var(--line);
-      border-radius: var(--radius2);
-      padding: 16px;
-      box-shadow: var(--shadow);
-      display:flex; flex-direction:column; gap:12px;
-    }
-    .sideCard{
-      padding: 10px 0;
-      border-top: 1px solid rgba(230,223,212,.65);
-    }
-    .sideCard:first-child{border-top:none; padding-top:0}
-    .sideCard b{display:block; font-size:13px; margin-bottom:6px; color: var(--green)}
-    .sideCard p{margin:0; color:var(--muted2); font-size:13px}
-
-    /* Sections */
-    section{padding:16px 0}
-    .sectionTitle{
-      display:flex; align-items:flex-end; justify-content:space-between; gap:14px;
-      margin: 6px 0 12px;
-    }
-    h2{
-      margin:0;
-      font-size:22px;
-      letter-spacing:-.2px;
-      color: var(--green); /* ✅ titres en vert comme avant */
-    }
-    .subtitle{color:var(--muted2); font-size:13px; max-width:80ch}
-
-    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:12px}
-    .twoCol{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
-
-    /* Encarts sobres beige (pas blanc) */
-    .card{
-      background: rgba(251,246,239,.92);
-      border:1px solid rgba(230,223,212,.85);
-      border-radius: 16px;
-      padding: 14px;
-      box-shadow: var(--shadow2);
-    }
-    .card h3{margin:0 0 6px; font-size:14px; color:#000; font-weight:900}
-    .card p{margin:0; color:var(--muted2); font-size:13px}
-
-    .callout{
-      border-radius: 16px;
-      padding: 14px;
-      border: 1px solid rgba(31,122,58,.22);
-      background: rgba(251,246,239,.92);
-      box-shadow: var(--shadow2);
-    }
-    .callout b{display:block; margin-bottom:6px; color: var(--green)}
-    .callout p{margin:0; color:var(--muted2); font-size:13px}
-
-    /* Contact simple */
-    .contactBox{
-      background: rgba(251,246,239,.92);
-      border:1px solid rgba(230,223,212,.85);
-      border-radius: 16px;
-      padding: 16px;
-      box-shadow: var(--shadow2);
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-    }
-    .contactLine{
-      display:flex;
-      flex-direction:column;
-      gap:4px;
-    }
-    .contactTitle{
-      font-weight:900;
-      color:#000;
-      font-size:14px;
-    }
-    .contactEmail{
-      font-weight:900;
-      font-size:18px; /* ✅ plus gros */
-      color:#000;
-    }
-
-    footer{
-      padding:22px 0 34px;
-      border-top:1px solid var(--line);
-      color:var(--muted2);
-      background: rgba(255,255,255,.45);
-      margin-top: 10px;
-    }
-    footer .wrap{
-      display:flex; flex-wrap:wrap; gap:14px;
-      align-items:flex-start; justify-content:space-between;
-    }
-
-    .footLinks{display:flex; gap:10px; flex-wrap:wrap}
-    .footLinks a{
-      padding:8px 10px;
-      border-radius:12px;
-      border:1px solid transparent;
-    }
-    .footLinks a:hover{border-color:var(--line); background: rgba(255,255,255,.70); text-decoration:none}
-
-    .legalBox{
-      margin-top: 10px;
-      border:1px solid var(--line);
-      border-radius: 16px;
-      padding: 14px;
-      background: rgba(255,255,255,.70);
-      box-shadow: var(--shadow2);
-      max-width: 820px;
-    }
-    .legalBox b{color:#000; font-weight:900}
-    .legalBox p{margin:8px 0 0; font-size:12px; color: var(--muted2)}
-    .tiny{font-size:12px}
-
-    /* Responsive */
-    @media (max-width: 940px){
-      h1{font-size:30px}
-      nav{display:none}
-      .heroGrid{grid-template-columns: 1fr;}
-      .twoCol{grid-template-columns: 1fr}
-      .grid3{grid-template-columns: 1fr}
-    }
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55;margin:24px;max-width:980px}
+    h1,h2,h3{line-height:1.2}
+    small{color:#555}
+    a{color:inherit}
+    ul{margin-top:8px}
+    code{background:#f5f5f5;padding:2px 5px;border-radius:6px}
+    .box{border:1px solid #e5e5e5;border-radius:12px;padding:12px;background:#fafafa}
   </style>
 </head>
-
 <body>
-  <header class="top">
-    <div class="wrap">
-      <div class="brand">
-        <div class="logo" aria-label="Bo’CitéArt">
-          <!-- IMPORTANT : mets ton fichier logo dans le dépôt GitHub au même niveau que index.html -->
-          <img src="logo-bociteart.png" alt="Logo Bo’CitéArt" style="width:100%;height:100%;object-fit:contain;padding:6px;">
-        </div>
-        <div>
-  <b>
-  <span style="color:var(--green)">Bo’Cité</span><span style="color:var(--red)">Art</span>
-</b>
-          <small>Réinventer la ville, ensemble</small>
-        </div>
-      </div>
 
-      <nav aria-label="Navigation">
-        <a href="#vision">Vision</a>
-        <a href="#facettes">Facettes</a>
-        <a href="#impact">Impact</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<h1>Conditions Générales d’Utilisation (CGU)</h1>
+<p><small>Dernière mise à jour : 2026-02-06</small></p>
 
-    <div class="cta">
-  <a class="social linkedin" href="https://www.linkedin.com/in/jean-michel-brulé-33a303209" target="_blank" rel="noopener" aria-label="LinkedIn Bo’CitéArt">
-    <svg viewBox="0 0 24 24">
-      <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4v16h-4zM8 8h3.8v2.2h.1c.5-1 1.9-2.2 3.9-2.2 4.2 0 5 2.8 5 6.4V24h-4v-8.6c0-2-.04-4.6-2.8-4.6-2.8 0-3.2 2.2-3.2 4.4V24h-4z"/>
-    </svg>
-  </a>
+<p>
+Les présentes Conditions Générales d’Utilisation (« CGU ») encadrent l’accès et l’utilisation du site et/ou de l’application Bo’CitéArt (le « Service »).
+Toute utilisation du Service implique l’acceptation pleine et entière des CGU.
+</p>
 
-  <a class="social instagram" href="https://www.instagram.com/bociteart" target="_blank" rel="noopener" aria-label="Instagram Bo’CitéArt">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.3 2.3.5.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.5 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.9-.5 2.3-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.3.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.3-2.3-.5-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.5-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.9.5-2.3.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.3-.5C8.4 2.2 8.8 2.2 12 2.2zm0 3.3a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zm0 10.7a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4zm6.8-11.3a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-    </svg>
-  </a>
-
-  <a class="btn primary" href="#contact">Me contacter</a>
+<div class="box">
+  <strong>Principe fondamental :</strong> Bo’CitéArt est un <strong>cadre territorial</strong> (gouvernance + règles + équité + sécurité + preuve).
+  L’application est un <strong>outil</strong>. Le Bo’CitéCoin est un <strong>outil de reconnaissance</strong> (type points), <strong>pas une monnaie</strong>.
 </div>
 
-    </div>
-  </header>
+<h2>1. Définitions</h2>
+<ul>
+  <li><strong>Utilisateur</strong> : toute personne accédant au Service (avec ou sans compte).</li>
+  <li><strong>Citoyen</strong> : utilisateur non professionnel.</li>
+  <li><strong>Partenaire</strong> : entité professionnelle ou institutionnelle (commerçant, école/établissement, association, collectivité).</li>
+  <li><strong>Bo’CitéCoin</strong> : points de reconnaissance utilisables uniquement dans le cadre contractuel Bo’CitéArt/Partenaires.</li>
+</ul>
 
-  <main class="wrap">
-    <!-- HERO -->
-    <div class="hero">
-      <div class="heroGrid">
-        <div class="panel">
-          <div class="kicker"><span class="dot"></span>Projet territorial • art • citoyenneté • commerce local</div>
-          <h1>Relier tous les secteurs d’une ville — et redonner envie de vivre le local.</h1>
-          <p class="note" style="margin-top:10px; max-width:70ch;">
-            Révéler la ville par des repères visuels, mettre en lumière des détails inattendus, fédérer autour d’une identité commune, illuminer les espaces autrement… visiter, voyager et (re)découvrir les quartiers sous un angle nouveau — sans en dire davantage ici.
-          </p>
+<h2>2. Présentation du Service</h2>
+<p>
+Bo’CitéArt relie habitants, commerces, écoles, associations/acteurs sportifs et collectivités dans un cadre structuré, non partisan et orienté utilité.
+Bo’CitéArt n’est <strong>ni</strong> un réseau social, <strong>ni</strong> un service financier, <strong>ni</strong> une plateforme de paiement.
+</p>
 
-          <p class="note" style="margin-top:10px; max-width:70ch;">
-            Bo’CitéArt propose des expériences simples et accessibles à tous, tout en réservant quelques surprises : ludiques, civiques et interactives — via des QR codes et autres dispositifs… chuttt, ici je préserve l’effet de découverte.
-          </p>
+<h2>3. Accès au Service — accès sans compte</h2>
+<ul>
+  <li>Le site et certaines fonctionnalités de consultation peuvent être accessibles <strong>sans création de compte</strong>.</li>
+  <li>Certaines fonctionnalités (wallet Bo’CitéCoin, historique, QR personnel, espace pro, factures, achats publicitaires, publication école/mairie) nécessitent un compte.</li>
+  <li>Bo’CitéArt peut faire évoluer les modalités d’accès pour des raisons de sécurité, conformité ou continuité.</li>
+</ul>
 
+<h2>4. Comptes, identité et sécurité</h2>
+<ul>
+  <li>L’utilisateur s’engage à fournir des informations exactes et à ne pas usurper l’identité d’un tiers.</li>
+  <li>L’utilisateur est responsable de la confidentialité de ses identifiants et de la sécurisation de son appareil (code, biométrie, etc.).</li>
+  <li>En cas de suspicion de fraude, Bo’CitéArt peut imposer des mesures renforcées (vérifications, suspension, limitation de fonctions).</li>
+</ul>
 
-          <div class="heroActions">
-            <a class="btn primary" href="#vision">Découvrir la vision</a>
-            <a class="btn red" href="#impact">Voir l’impact</a>
-          </div>
+<h2>5. Gouvernance et pilotage (non négociable)</h2>
+<ul>
+  <li><strong>Bo’CitéArt pilote et arbitre</strong> : règles, accès, suspension, preuve, sécurité, équité, évolution.</li>
+  <li><strong>Collectivité</strong> : accès limité à son (ses) espace(s) et gabarits, sans pouvoir de déploiement global hors cadre Bo’CitéArt.</li>
+  <li><strong>Admin</strong> : administration complète <strong>via interfaces web</strong> (non visibles dans l’app mobile), avec journalisation, suspensions graduées et désactivation à distance.</li>
+</ul>
 
-          <div class="pillRow" aria-label="Points clés">
-            <span class="pill"><i></i>Professionnel & structuré</span>
-            <span class="pill"><i></i>Commerce local & centre-ville</span>
-            <span class="pill"><i></i>Participation citoyenne encadrée</span>
-            <span class="pill"><i></i>Culture + civisme + modernité</span>
-          </div>
-        </div>
+<h2>6. Règles d’usage et interdictions</h2>
+<p>L’utilisateur s’engage à utiliser Bo’CitéArt dans le respect des lois, des personnes et des valeurs civiques.</p>
+<p>Sont strictement interdits :</p>
+<ul>
+  <li>tout propos injurieux, diffamatoire, discriminatoire, harcelant, ou incitant à la haine,</li>
+  <li>toute fraude, tentative d’abus, manipulation, contournement des règles, ou accès non autorisé,</li>
+  <li>toute action nuisant à la sécurité des personnes (notamment via les dispositifs d’urgence) ou à la réputation d’un tiers,</li>
+  <li>toute extraction massive, scraping, attaque, ou usage automatisé non autorisé.</li>
+</ul>
+<p>
+Tout manquement peut entraîner des mesures graduées (avertissement, limitation, suspension, blocage), sans préavis en cas de gravité,
+avec conservation d’éléments de preuve (logs/journalisation) dans les limites légales.
+</p>
 
-        <aside class="side" aria-label="Résumé">
-          <div class="sideCard">
-            <b>Le principe</b>
-            <p>Relier les forces existantes d’une ville pour recréer cohérence, visibilité et dynamique collective.</p>
-          </div>
+<h2>7. Bo’CitéCoin : nature « anti-monnaie »</h2>
+<p>
+Le Bo’CitéCoin est un <strong>outil de reconnaissance locale</strong> comparable à des points.
+Il ne constitue en aucun cas une monnaie, un titre financier, un instrument de paiement, un dépôt, un crédit, un actif échangeable, ni une valeur stockée.
+</p>
+<ul>
+  <li>Aucun échange euro ↔ coin.</li>
+  <li>Aucun transfert entre utilisateurs.</li>
+  <li>Utilisable uniquement dans le cadre défini par Bo’CitéArt et ses Partenaires contractuels.</li>
+  <li>Comptabilité interne et journaux techniques non publics.</li>
+</ul>
 
-          <div class="sideCard">
-            <b>Ce que Bo’CitéArt évite</b>
-            <p>Le projet gadget, la communication sans effets, et l’innovation qui reste au stade du discours.</p>
-          </div>
+<h2>8. Attribution et utilisation des Bo’CitéCoins</h2>
 
-          <div class="sideCard">
-            <b>Cadre & sérieux</b>
-            <p>Une démarche conçue pour être lisible, sobre, durable — et compatible avec le fonctionnement d’une collectivité.</p>
-          </div>
-        </aside>
-      </div>
-    </div>
+<h3>8.1 Attribution (commerces partenaires)</h3>
+<p>
+L’attribution est déclenchée par le partenaire commerçant, selon les règles affichées dans le Service, avec mécanismes anti-abus
+(anti double-attribution, contrôles de périodes, anomalies).
+</p>
 
-    <!-- VISION -->
-   <section id="vision">
-  <div class="sectionTitle">
-    <div>
-      <h2>Vision</h2>
-      <div class="subtitle" style="margin-top:8px;">
-        Une démarche destinée aux citoyens, aux commerçants, aux associations, aux acteurs culturels, aux sportifs, aux élus, aux institutions… et à bien d’autres encore. Quelques surprises seront, pour certains, particulièrement révélatrices.
-      </div>
-    </div>
-  </div>
-      <div class="twoCol">
-        <div class="callout">
-          <b>Une ville qui se respecte est une ville dans laquelle on se reconnaît.</b>
-          <p>
-            L’enjeu n’est pas seulement esthétique : il est culturel, civique et économique.
-            Quand les habitants deviennent acteurs, le regard change — puis les comportements.
-          </p>
+<h3>8.2 Portefeuille unique</h3>
+<p>
+Chaque utilisateur dispose d’un portefeuille unique. Aucun transfert d’un utilisateur à un autre n’est autorisé.
+</p>
 
-          <p class="note" style="margin-top:10px; max-width:70ch;">
-            Bo’CitéArt s’inscrit dans une réflexion de long terme, nourrie par l’observation du terrain,
-            les échanges avec les acteurs locaux et une présence régulière dans le débat public.
-          </p>
+<h3>8.3 Échanges cadeaux — seuils et plafonds « nourriture »</h3>
+<p>
+Les Bo’CitéCoins peuvent ouvrir droit à des cadeaux/avantages <strong>offerts volontairement</strong> par les Partenaires, dans les limites suivantes :
+</p>
+<ul>
+  <li><strong>Seuil minimum</strong> : 30 Bo’CitéCoins minimum.</li>
+  <li><strong>Valeurs cibles indicatives</strong> :
+    <ul>
+      <li>30 Bo’CitéCoins → cadeau d’une valeur de 30 €</li>
+      <li>50 Bo’CitéCoins → cadeau d’une valeur de 70 €</li>
+      <li>100 Bo’CitéCoins → cadeau d’une valeur de 200 €</li>
+    </ul>
+  </li>
+  <li><strong>Plafonds nourriture/boissons</strong> (sur la valeur du cadeau) :
+    <ul>
+      <li>30 Bo’CitéCoins → <strong>10% max</strong> nourriture/boissons</li>
+      <li>50 Bo’CitéCoins → <strong>20% max</strong> nourriture/boissons</li>
+      <li>100 Bo’CitéCoins → <strong>30% max</strong> nourriture/boissons</li>
+    </ul>
+  </li>
+</ul>
 
-        </div>
+<h3>8.4 Produits non éligibles</h3>
+<p>
+Sont exclus des échanges, notamment : carburants (essence, gazole, E85…), électricité, gaz, et produits assimilés.
+Chaque partenaire peut, en plus, appliquer des exclusions nécessaires (ex. réglementation, contraintes internes), sous sa responsabilité.
+</p>
 
-        <div class="callout" style="border-color: rgba(179,38,30,.18);">
-          <b style="color:var(--red)">Commerce local & centre-ville</b>
-          <p>
-            Sans alternative locale attractive, le e-commerce s’impose par défaut.
-            Bo’CitéArt contribue à recréer du flux, de l’attachement et de la visibilité — de manière fédératrice et durable.
-          </p>
-        </div>
-      </div>
+<h2>9. Partenaires : responsabilité propre (clause “pare-feu”)</h2>
+<p>
+Chaque Partenaire (commerçant, école/établissement, association, collectivité) agit <strong>en autonomie</strong> et sous sa <strong>seule responsabilité</strong>
+pour tout ce qui relève de ses obligations, notamment :
+</p>
+<ul>
+  <li>règles fiscales/comptables, affichages, obligations d’information, conformité des offres, réglementation sectorielle,</li>
+  <li>contenus qu’il publie/valide (textes, visuels, annonces, informations),</li>
+  <li>collecte et validité des autorisations nécessaires (ex. mineurs, droit à l’image, voix, etc.),</li>
+  <li>respect des procédures internes (notamment pour les collectivités : engagement, bon de commande, validation habilitée).</li>
+</ul>
+<p>
+Bo’CitéArt fournit un outil technique et un cadre. <strong>Bo’CitéArt n’est pas responsable</strong> des manquements, erreurs, omissions,
+ou non-conformités commis par un Partenaire. Le Partenaire garantit Bo’CitéArt contre toute réclamation résultant de ses contenus, offres, décisions ou obligations.
+</p>
 
-<div class="grid3" style="margin-top:12px">
-        <div class="card">
-          <h3>Un cadre commun</h3>
-          <p>Relier citoyens, commerces, écoles, associations et mairie dans une logique lisible, plutôt que des actions isolées.</p>
-        </div>
-        <div class="card">
-          <h3>Une dynamique visible</h3>
-          <p>Créer un “effet de ville” : repères, fierté partagée, et mobilisation progressive.</p>
-        </div>
-        <div class="card">
-          <h3>Un engagement volontaire</h3>
-          <p>Co-construction, clarté, et décisions assumées : une démarche sérieuse, sans surcharge inutile.</p>
-        </div>
-      </div>
-    </section>
+<h2>10. Écoles : « mot du jour » et audio (mineurs)</h2>
+<ul>
+  <li>Le « mot du jour » est publié par un compte enseignant.</li>
+  <li>Audio :
+    <ul>
+      <li>Mode A : voix enfant <strong>uniquement</strong> si les autorisations parentales requises sont valides et conservées par l’établissement,</li>
+      <li>Mode B : voix de synthèse (fallback / défaut si absence d’accord).</li>
+    </ul>
+  </li>
+  <li>L’établissement atteste disposer des autorisations nécessaires et en conserve la preuve selon ses procédures et obligations.</li>
+  <li>Bo’CitéArt peut suspendre un contenu litigieux à titre conservatoire.</li>
+</ul>
 
-    <!-- FACETTES -->
-    <section id="facettes">
-      <div class="sectionTitle">
-        <div>
-          <h2>Les facettes du projet</h2>
-          <div class="subtitle">Un même projet, plusieurs fonctions : crédibilité, utilité, influence positive, cohérence territoriale.</div>
-        </div>
-      </div>
+<h2>11. QR codes, contenus publics et lecture audio</h2>
+<p>
+Les QR codes donnent accès à des contenus de découverte (fresques, artistes, mécènes, histoire locale) pouvant être affichés et/ou lus via synthèse vocale.
+Les informations sont fournies à titre informatif et peuvent évoluer.
+</p>
 
-      <div class="grid3">
-        <div class="card">
-          <h3>PRO — Structuré & fiable</h3>
-          <p>Gouvernance, cadre, sobriété, respect des parties prenantes : une démarche pensée pour durer.</p>
-        </div>
-        <div class="card">
-          <h3>Novateur — Sans gadget</h3>
-          <p>Une modernité au service du réel : expérience urbaine, lien social, et attachement au local.</p>
-        </div>
-        <div class="card">
-          <h3>Influence positive</h3>
-          <p>Mobiliser sans diviser : valoriser les acteurs, donner envie d’agir, renforcer la fierté locale.</p>
-        </div>
-        <div class="card">
-          <h3>Citoyenneté — Responsabilité</h3>
-          <p>Quand les habitants deviennent acteurs, le respect de l’espace public progresse naturellement.</p>
-        </div>
-        <div class="card">
-          <h3>Culture — Ville repère</h3>
-          <p>Créer des repères symboliques : l’art comme déclencheur d’attention, d’élan et d’attachement.</p>
-        </div>
-        <div class="card">
-          <h3>Information claire</h3>
-          <p>Rendre visible ce qui existe déjà : initiatives, acteurs, signaux et dynamiques locales.</p>
-        </div>
-      </div>
-    </section>
+<h2>12. Dispositifs d’urgence, 112 / 3919 / 119 et DAE</h2>
+<p>
+Les boutons d’urgence sont destinés exclusivement à des situations réelles. Toute utilisation abusive peut entraîner suspension et/ou signalement.
+Bo’CitéArt met en œuvre un mode dégradé pour maintenir l’accès à des fonctions vitales, mais ne garantit pas la disponibilité permanente (maintenance, incident, force majeure).
+</p>
+<p>
+La fonctionnalité DAE (défibrillateur) propose une orientation vers un point supposé proche selon les données disponibles. L’utilisateur reste responsable de ses décisions
+et doit, en cas d’urgence, contacter immédiatement les secours.
+</p>
 
-    <!-- IMPACT -->
-    <section id="impact">
-      <div class="sectionTitle">
-        <div>
-          <h2>Impact attendu</h2>
-          <div class="subtitle">Ce que Bo’CitéArt vise à produire — de manière observable, utile et durable.</div>
-        </div>
-      </div>
+<h2>13. Modération, suspensions, désactivation</h2>
+<p>
+Bo’CitéArt peut modérer, suspendre, limiter ou désactiver des comptes/fonctions en cas d’abus, fraude, non-paiement (côté partenaires), ou risque de sécurité.
+Certaines décisions et actions sensibles peuvent être journalisées à des fins de preuve et de protection du dispositif.
+</p>
 
-      <div class="grid3">
-        <div class="card">
-          <h3>Fierté & respect</h3>
-          <p>Une ville que l’on admire est une ville que l’on respecte davantage. Le regard précède le comportement.</p>
-        </div>
-        <div class="card">
-          <h3>Flux & fidélité</h3>
-          <p>Réactiver l’envie de proximité : redonner du trafic aux commerces et une raison de revenir au local.</p>
-        </div>
-        <div class="card">
-          <h3>Effet de réseau</h3>
-          <p>Relier écoles, associations, commerces et mairie : quand tout se connecte, l’élan devient collectif.</p>
-        </div>
-      </div>
+<h2>14. Responsabilité (limitation)</h2>
+<p>
+Bo’CitéArt est tenu à une obligation de moyens. Bo’CitéArt ne saurait être tenu responsable :
+</p>
+<ul>
+  <li>des dommages indirects (perte de chance, perte de chiffre d’affaires, préjudice commercial),</li>
+  <li>des contenus, offres, informations publiées/validées par des Partenaires,</li>
+  <li>des décisions prises par l’utilisateur à partir du Service,</li>
+  <li>des interruptions ou dysfonctionnements temporaires,</li>
+  <li>des usages non conformes ou frauduleux réalisés par un tiers.</li>
+</ul>
 
-      <div class="twoCol" style="margin-top:12px">
-        <div class="callout">
-          <b>Pourquoi “agir ensemble” devient un constat de bon sens</b>
-          <p>
-            Année après année, les usages basculent “par défaut”.
-            Bo’CitéArt propose une logique inverse : rendre le local visible, désirable et collectif.
-          </p>
-        </div>
-        <div class="callout" style="border-color: rgba(179,38,30,.18);">
-          <b style="color:var(--red)">Sans dévoiler la méthode</b>
-          <p>
-            Le site présente la vision et le cadre, sans exposer les mécanismes détaillés.
-            L’objectif : donner envie, rassurer, fédérer — puis ouvrir le bon échange avec les acteurs concernés.
-          </p>
-        </div>
-      </div>
-    </section>
+<h2>15. Propriété intellectuelle</h2>
+<p>
+Le concept Bo’CitéArt, ses déclinaisons, contenus, règles, structure, marques et éléments visuels sont protégés.
+Toute reproduction/adaptation/exploitation sans autorisation écrite est interdite.
+</p>
 
-    <!-- CONTACT (simplifié) -->
-    <section id="contact">
-      <div class="sectionTitle">
-        <div>
-          <h2>Contact</h2>
-          <div class="subtitle">Pour une prise de contact, une discussion institutionnelle, ou un échange local.</div>
-        </div>
-      </div>
+<h2>16. Données personnelles</h2>
+<p>
+Le traitement des données est décrit dans la Politique de protection des données (RGPD). En cas de contradiction, le document spécifique à la matière concernée prévaut.
+</p>
 
-      <div class="contactBox">
-        <div class="contactLine">
-          <div class="contactTitle">Email</div>
-          <div class="contactEmail">
-        <a href="mailto:contact@bociteart.com" style="color:#1a73e8; font-weight:700;">
-  contact@bociteart.com
-</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+<h2>17. Modification des CGU</h2>
+<p>
+Bo’CitéArt peut modifier les CGU. La version en ligne fait foi. En cas d’évolution majeure, une nouvelle acceptation peut être demandée.
+</p>
 
-  <footer>
-    <div class="wrap">
-      <div>
-        <div style="font-weight:900; font-size:16px;">
-          <span style="color:var(--green)">Bo’Cité</span><span style="color:var(--red)">Art</span>
-        </div>
+<h2>18. Contact</h2>
+<p>
+Contact : <a href="mailto:contact@bociteart.com">contact@bociteart.com</a>
+</p>
 
-        <div style="margin-top:6px; font-size:13px;">
-          <a href="https://bociteart.com/" target="_blank" rel="noopener" style="color:#1a73e8; font-weight:700;">
-            https://bociteart.com/
-          </a>
-        </div>
+<h2>19. Droit applicable et litiges</h2>
+<p>
+Les CGU sont régies par le droit français. Compétence :
+</p>
+<ul>
+  <li>Si l’utilisateur agit à titre professionnel : juridictions compétentes du ressort du siège de Bo’CitéArt (sauf règle impérative contraire).</li>
+  <li>Si l’utilisateur agit à titre non professionnel/consommateur : règles légales applicables.</li>
+</ul>
 
-        <div class="tiny" style="margin-top:4px">
-          © <span id="year"></span> • Projet territorial &amp; artistique • Tous droits réservés
-        </div>
+<hr>
 
-        <div class="legalBox">
-          <b>Mentions légales</b>
-          <p>
-            <strong>Éditeur du site :</strong> Jean-Michel Brulé — Projet Bo’CitéArt<br>
-            <strong>Localisation :</strong> Lille — Hauts-de-France — France<br>
-            <strong>Contact :</strong> <a href="mailto:contact@bociteart.com">contact@bociteart.com</a><br>
-            <strong>Statut :</strong> Projet en phase de structuration. Les informations présentées n’ont pas valeur contractuelle.
-          </p>
-          <p>
-            <strong>Propriété intellectuelle :</strong> Bo’CitéArt est une création originale protégée (INPI, e-Soleau, EUIPO).
-            Le nom, le concept, les contenus et la structure du projet sont protégés par le droit d’auteur.
-            Toute reproduction, adaptation ou exploitation sans autorisation écrite est interdite.
-          </p>
-        </div>
-      </div>
+<section id="annexe-securite">
+  <h2>Annexe — Sécurité & continuité (perte/vol/changement d’appareil)</h2>
 
-      <div class="footLinks">
-        <a href="#vision">Vision</a>
-        <a href="#facettes">Facettes</a>
-        <a href="#impact">Impact</a>
-        <a href="#contact">Contact</a>
-        <a href="https://www.linkedin.com/in/jean-michel-brulé-33a303209" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://www.instagram.com/bociteart" target="_blank" rel="noopener">Instagram</a>
-      </div>
-    </div>
+  <h3>1. Principe</h3>
+  <p>
+    Les données (solde, historiques, factures, engagements, journaux) sont associées à un compte et stockées sur des serveurs sécurisés.
+    Le téléphone est un moyen d’accès, pas un coffre-fort.
+  </p>
 
-    <div style="text-align:center; padding:16px; font-size:14px; border-top:1px solid var(--line); background: rgba(255,255,255,.35);">
-      <a href="mentions-legales.html">Mentions légales</a>
-      <span style="opacity:.6;"> • </span>
-      <a href="rgpd.html">Politique de confidentialité (RGPD)</a>
-      <span style="opacity:.6;"> • </span>
-      <a href="cgu.html">CGU</a>
-      <span style="opacity:.6;"> • </span>
-      <a href="cgv.html">CGV</a>
-    </div>
-  </footer>
+  <h3>2. Citoyens</h3>
+  <ul>
+    <li>Le compte et le solde ne sont pas perdus.</li>
+    <li>Reconnexion possible sur un nouvel appareil.</li>
+    <li>Sessions précédentes invalidées selon les mécanismes de sécurité.</li>
+  </ul>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <h3>3. Partenaires et comptes institutionnels</h3>
+  <ul>
+    <li>Opérations, historiques, factures et engagements restent accessibles.</li>
+    <li>Un appareil déclaré perdu/volé peut être désactivé.</li>
+    <li>Une vérification renforcée peut être exigée.</li>
+  </ul>
+
+  <h3>4. Journalisation</h3>
+  <p>
+    Certaines actions sensibles font l’objet d’une journalisation et d’un horodatage à des fins de sécurité et de preuve, dans les limites légales.
+  </p>
+</section>
+
 </body>
 </html>
 
  
+
 
 
 
