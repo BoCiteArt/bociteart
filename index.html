@@ -1,155 +1,375 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Bo’CitéArt — Réinventer la ville, ensemble</title>
-  <meta name="description" content="Bo’CitéArt est un projet territorial et artistique visant à relier citoyens, commerces, écoles, associations et collectivités dans un cadre structuré, utile et durable.">
-  <meta name="robots" content="index,follow">
+  <meta name="description" content="Bo’CitéArt : projet territorial, culturel et citoyen pour relier habitants, commerces, écoles, associations et collectivités dans un cadre structuré, utile et durable." />
+  <meta name="robots" content="index,follow" />
 
   <style>
+    :root{
+      --bg:#f7f1e8;
+      --bg2:#fbf6ef;
+      --ink:#161616;
+      --muted:#5b5b5b;
+      --line:#e6dfd4;
+      --green:#1f7a3a;
+      --red:#b3261e;
+      --shadow:0 14px 40px rgba(0,0,0,.08);
+      --shadow2:0 8px 22px rgba(0,0,0,.06);
+      --radius:18px;
+      --radius2:26px;
+      --max:1120px;
+      --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:#f7f1e8;
-      color:#161616;
-      line-height:1.55;
+      font-family:var(--font);
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.5;
     }
-    header{
-      background:#f7f1e8;
-      border-bottom:1px solid #e6dfd4;
+    a{color:inherit}
+    a:hover{text-decoration:underline}
+
+    .wrap{max-width:var(--max);margin:0 auto;padding:20px}
+
+    .top{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(10px);
+      background:rgba(247,241,232,.90);
+      border-bottom:1px solid var(--line);
     }
-    .wrap{
-      max-width:1100px;
-      margin:0 auto;
-      padding:24px;
+    .top .wrap{
+      display:flex;align-items:center;justify-content:space-between;gap:14px;
     }
-    h1{
-      font-size:34px;
-      line-height:1.1;
-      margin:16px 0;
+
+    .brand{display:flex;align-items:center;gap:12px;min-width:240px}
+    .logo{
+      width:44px;height:44px;border-radius:14px;background:#fff;
+      border:1px solid var(--line);box-shadow:var(--shadow2);
+      overflow:hidden;display:grid;place-items:center;
     }
-    h2{
-      margin-top:40px;
-      color:#1f7a3a;
+    .brand b{display:block;font-size:14px}
+    .brand small{display:block;color:var(--muted);margin-top:2px;font-size:12px}
+
+    nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    nav a{
+      color:var(--muted);font-size:13px;padding:9px 10px;border-radius:12px;
+      border:1px solid transparent;background:transparent;text-decoration:none;
     }
-    p{
-      max-width:75ch;
+    nav a:hover{
+      border-color:var(--line);background:rgba(255,255,255,.70);
+      color:var(--ink);text-decoration:none;
     }
-    .hero{
-      padding:40px 0;
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 14px;border-radius:14px;border:1px solid var(--line);
+      background:rgba(255,255,255,.80);color:var(--ink);
+      font-weight:800;font-size:13px;box-shadow:var(--shadow2);
+      white-space:nowrap;text-decoration:none;
     }
+    .btn:hover{background:#fff}
+    .btn.primary{
+      background:var(--green);border-color:var(--green);color:#fff;
+      box-shadow:0 16px 40px rgba(31,122,58,.18);
+    }
+    .btn.primary:hover{filter:brightness(1.05)}
+
+    .hero{padding:22px 0 10px}
+    .heroGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;align-items:stretch}
+    .panel{
+      background:rgba(251,246,239,.92);
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
+      box-shadow:var(--shadow);
+      padding:20px;
+      overflow:hidden;
+    }
+    .kicker{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-size:13px;font-weight:900}
+    .dot{width:9px;height:9px;border-radius:999px;background:var(--red);box-shadow:0 0 0 6px rgba(179,38,30,.12)}
+    h1{margin:12px 0 10px;font-size:36px;line-height:1.08;letter-spacing:-.6px}
+    .lead{color:var(--muted);font-size:16px;max-width:70ch;margin:0}
+    .heroActions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+
+    .pillRow{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
     .pill{
-      display:inline-block;
-      padding:6px 14px;
-      border-radius:999px;
-      background:#ffffff;
-      border:1px solid #e6dfd4;
-      font-size:13px;
-      margin:4px 6px 0 0;
+      font-size:12px;color:var(--muted);
+      border:1px solid var(--line);background:rgba(255,255,255,.86);
+      padding:8px 10px;border-radius:999px;display:inline-flex;gap:8px;align-items:center;
     }
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap:16px;
-      margin-top:20px;
-    }
-    .card{
-      background:#fbf6ef;
-      border:1px solid #e6dfd4;
-      border-radius:16px;
+    .pill i{width:8px;height:8px;border-radius:999px;background:rgba(31,122,58,.25)}
+
+    .side{
+      background:rgba(251,246,239,.92);
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
       padding:16px;
+      box-shadow:var(--shadow);
+      display:flex;flex-direction:column;gap:12px;
     }
+    .sideCard{padding:10px 0;border-top:1px solid rgba(230,223,212,.65)}
+    .sideCard:first-child{border-top:none;padding-top:0}
+    .sideCard b{display:block;font-size:13px;margin-bottom:6px;color:var(--green)}
+    .sideCard p{margin:0;color:var(--muted);font-size:13px}
+
+    section{padding:16px 0}
+    .sectionTitle{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin:6px 0 12px}
+    h2{margin:0;font-size:22px;letter-spacing:-.2px;color:var(--green)}
+    .subtitle{color:var(--muted);font-size:13px;max-width:80ch}
+
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .twoCol{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+    .card{
+      background:rgba(251,246,239,.92);
+      border:1px solid rgba(230,223,212,.85);
+      border-radius:16px;
+      padding:14px;
+      box-shadow:var(--shadow2);
+    }
+    .card h3{margin:0 0 6px;font-size:14px;color:#000;font-weight:900}
+    .card p{margin:0;color:var(--muted);font-size:13px}
+
+    .callout{
+      border-radius:16px;padding:14px;border:1px solid rgba(31,122,58,.22);
+      background:rgba(251,246,239,.92);box-shadow:var(--shadow2);
+    }
+    .callout b{display:block;margin-bottom:6px;color:var(--green)}
+    .callout p{margin:0;color:var(--muted);font-size:13px}
+
+    .contactBox{
+      background:rgba(251,246,239,.92);
+      border:1px solid rgba(230,223,212,.85);
+      border-radius:16px;padding:16px;box-shadow:var(--shadow2);
+      display:flex;flex-direction:column;gap:10px;
+    }
+    .contactTitle{font-weight:900;color:#000;font-size:14px}
+    .contactEmail{font-weight:900;font-size:18px;color:#000}
+
     footer{
-      margin-top:60px;
-      background:#fbf6ef;
-      border-top:1px solid #e6dfd4;
-    }
-    footer a{
-      color:#1a73e8;
-      text-decoration:none;
-      font-weight:600;
-    }
-    footer a:hover{
-      text-decoration:underline;
-    }
-    .footer-links{
-      font-size:14px;
+      padding:22px 0 34px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      background:rgba(255,255,255,.45);
       margin-top:10px;
     }
-    small{
-      color:#555;
+    footer .wrap{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start;justify-content:space-between}
+    .footLinks{display:flex;gap:10px;flex-wrap:wrap}
+    .footLinks a{padding:8px 10px;border-radius:12px;border:1px solid transparent;text-decoration:none}
+    .footLinks a:hover{border-color:var(--line);background:rgba(255,255,255,.70);text-decoration:none}
+
+    .legalBar{
+      text-align:center;padding:16px;font-size:14px;
+      border-top:1px solid var(--line);
+      background:rgba(255,255,255,.35);
+    }
+    .legalBar a{text-decoration:none}
+    .sep{opacity:.6}
+
+    @media (max-width: 940px){
+      h1{font-size:30px}
+      nav{display:none}
+      .heroGrid{grid-template-columns:1fr}
+      .twoCol{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
     }
   </style>
 </head>
 
 <body>
+  <header class="top">
+    <div class="wrap">
+      <div class="brand">
+        <div class="logo" aria-label="Bo’CitéArt">
+          <img src="logo-bociteart.png" alt="Logo Bo’CitéArt" style="width:100%;height:100%;object-fit:contain;padding:6px;">
+        </div>
+        <div>
+          <b><span style="color:var(--green)">Bo’Cité</span><span style="color:var(--red)">Art</span></b>
+          <small>Réinventer la ville, ensemble</small>
+        </div>
+      </div>
 
-<header>
-  <div class="wrap">
-    <strong>Bo’CitéArt</strong><br>
-    <small>Projet territorial & artistique</small>
-  </div>
-</header>
+      <nav aria-label="Navigation">
+        <a href="#vision">Vision</a>
+        <a href="#facettes">Facettes</a>
+        <a href="#impact">Impact</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-<main class="wrap">
-
-  <section class="hero">
-    <h1>Relier les forces d’une ville<br>pour redonner envie de vivre le local.</h1>
-
-    <p>
-      Bo’CitéArt est un projet territorial, culturel et citoyen.
-      Il vise à relier habitants, commerces, écoles, associations et collectivités
-      dans un cadre structuré, non partisan et orienté utilité réelle.
-    </p>
-
-    <div>
-      <span class="pill">Projet territorial</span>
-      <span class="pill">Art & culture</span>
-      <span class="pill">Citoyenneté</span>
-      <span class="pill">Commerce local</span>
-      <span class="pill">Cadre structuré</span>
+      <a class="btn primary" href="#contact">Me contacter</a>
     </div>
-  </section>
+  </header>
 
-  <section>
-    <h2>La vision</h2>
-    <p>
-      Une ville que l’on regarde autrement est une ville que l’on respecte davantage.
-      Bo’CitéArt agit comme un cadre commun, lisible et durable,
-      pour rendre visibles les dynamiques locales existantes
-      et recréer un sentiment d’appartenance collective.
-    </p>
-  </section>
+  <main class="wrap">
+    <div class="hero">
+      <div class="heroGrid">
+        <div class="panel">
+          <div class="kicker"><span class="dot"></span>Projet territorial • art • citoyenneté • commerce local</div>
+          <h1>Relier tous les secteurs d’une ville — et redonner envie de vivre le local.</h1>
+          <p class="lead">
+            Bo’CitéArt propose une démarche structurée et sobre : rendre le local visible, désirable et fédérateur,
+            sans gadget, dans un cadre clair.
+          </p>
 
-  <section>
-    <h2>Accès direct</h2>
-    <div class="grid">
-      <div class="card"><strong>Mentions légales</strong><br><a href="mentions-legales.html">Ouvrir</a></div>
-      <div class="card"><strong>RGPD</strong><br><a href="rgpd.html">Ouvrir</a></div>
-      <div class="card"><strong>CGU</strong><br><a href="cgu.html">Ouvrir</a></div>
-      <div class="card"><strong>CGV</strong><br><a href="cgv.html">Ouvrir</a></div>
+          <div class="heroActions">
+            <a class="btn primary" href="#vision">Découvrir la vision</a>
+            <a class="btn" href="#impact">Voir l’impact</a>
+          </div>
+
+          <div class="pillRow" aria-label="Points clés">
+            <span class="pill"><i></i>Gouvernance & cadre</span>
+            <span class="pill"><i></i>Respect des acteurs</span>
+            <span class="pill"><i></i>Utilité réelle</span>
+            <span class="pill"><i></i>Progressif & durable</span>
+          </div>
+        </div>
+
+        <aside class="side" aria-label="Résumé">
+          <div class="sideCard">
+            <b>Le principe</b>
+            <p>Relier les forces existantes d’une ville pour recréer cohérence, visibilité et dynamique collective.</p>
+          </div>
+          <div class="sideCard">
+            <b>Ce que Bo’CitéArt évite</b>
+            <p>Le projet gadget, la communication sans effets, et l’innovation qui reste au stade du discours.</p>
+          </div>
+          <div class="sideCard">
+            <b>Cadre & sérieux</b>
+            <p>Règles, sécurité et traçabilité : une démarche compatible avec le fonctionnement d’une collectivité.</p>
+          </div>
+        </aside>
+      </div>
     </div>
-  </section>
 
-</main>
+    <section id="vision">
+      <div class="sectionTitle">
+        <div>
+          <h2>Vision</h2>
+          <div class="subtitle" style="margin-top:8px;">
+            Une démarche pour citoyens, commerçants, écoles, associations et collectivités — pensée pour fédérer, sans diviser.
+          </div>
+        </div>
+      </div>
 
-<footer>
-  <div class="wrap">
-    <strong>Bo’CitéArt</strong><br>
-    <small>Réinventer la ville, ensemble</small>
+      <div class="twoCol">
+        <div class="callout">
+          <b>Une ville dans laquelle on se reconnaît est une ville que l’on respecte davantage.</b>
+          <p>Le regard change, puis les comportements. Bo’CitéArt vise un effet de ville : repères, fierté, dynamique.</p>
+        </div>
+        <div class="callout" style="border-color: rgba(179,38,30,.18);">
+          <b style="color:var(--red)">Commerce local & centre-ville</b>
+          <p>Bo’CitéArt aide à recréer visibilité, attachement et flux — avec une logique fédératrice et mesurée.</p>
+        </div>
+      </div>
 
-    <div class="footer-links">
-      <a href="mentions-legales.html">Mentions légales</a> •
-      <a href="rgpd.html">Politique de confidentialité (RGPD)</a> •
-      <a href="cgu.html">CGU</a> •
+      <div class="grid3" style="margin-top:12px">
+        <div class="card">
+          <h3>Un cadre commun</h3>
+          <p>Gouvernance, règles, sécurité et équité intégrées dès la conception.</p>
+        </div>
+        <div class="card">
+          <h3>Une dynamique visible</h3>
+          <p>Repères urbains, valorisation locale et participation encadrée.</p>
+        </div>
+        <div class="card">
+          <h3>Un engagement volontaire</h3>
+          <p>Pas d’obligation inutile : chacun participe selon ses moyens et son rôle.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="facettes">
+      <div class="sectionTitle">
+        <div>
+          <h2>Les facettes du projet</h2>
+          <div class="subtitle">Un même projet, plusieurs leviers : utilité, cohérence, influence positive, visibilité.</div>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card"><h3>PRO — Structuré</h3><p>Cadre lisible, traçabilité, sobriété, règles.</p></div>
+        <div class="card"><h3>Novateur — Sans gadget</h3><p>Technologie au service du réel, pas l’inverse.</p></div>
+        <div class="card"><h3>Influence positive</h3><p>Mobiliser sans créer de tensions.</p></div>
+        <div class="card"><h3>Citoyenneté</h3><p>Favoriser le respect de l’espace public.</p></div>
+        <div class="card"><h3>Culture</h3><p>Créer des repères et une identité locale.</p></div>
+        <div class="card"><h3>Information claire</h3><p>Rendre visible ce qui existe déjà, simplement.</p></div>
+      </div>
+    </section>
+
+    <section id="impact">
+      <div class="sectionTitle">
+        <div>
+          <h2>Impact attendu</h2>
+          <div class="subtitle">Des effets observables : fierté, flux local, participation encadrée.</div>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card"><h3>Fierté & respect</h3><p>Le regard précède le comportement.</p></div>
+        <div class="card"><h3>Flux & fidélité</h3><p>Redonner une raison de revenir au local.</p></div>
+        <div class="card"><h3>Effet réseau</h3><p>Quand tout se connecte, l’élan devient collectif.</p></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="sectionTitle">
+        <div>
+          <h2>Contact</h2>
+          <div class="subtitle">Pour une discussion institutionnelle ou un échange local.</div>
+        </div>
+      </div>
+
+      <div class="contactBox">
+        <div>
+          <div class="contactTitle">Email</div>
+          <div class="contactEmail">
+            <a href="mailto:contact@bociteart.com" style="color:#1a73e8;font-weight:800;text-decoration:none;">contact@bociteart.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <div style="font-weight:900;font-size:16px;">
+          <span style="color:var(--green)">Bo’Cité</span><span style="color:var(--red)">Art</span>
+        </div>
+        <div style="margin-top:6px;font-size:13px;">
+          <span style="opacity:.8;">© <span id="year"></span> • Tous droits réservés</span>
+        </div>
+      </div>
+
+      <div class="footLinks">
+        <a href="#vision">Vision</a>
+        <a href="#facettes">Facettes</a>
+        <a href="#impact">Impact</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="legalBar">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <span class="sep"> • </span>
+      <a href="rgpd.html">Politique de confidentialité (RGPD)</a>
+      <span class="sep"> • </span>
+      <a href="cgu.html">CGU</a>
+      <span class="sep"> • </span>
       <a href="cgv.html">CGV</a>
     </div>
+  </footer>
 
-    <p style="font-size:12px;margin-top:8px;">© 2026 — Tous droits réservés</p>
-  </div>
-</footer>
-
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
+
