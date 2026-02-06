@@ -16,36 +16,140 @@
       color:#161616;
       line-height:1.55;
     }
-
     header{
       background:#f7f1e8;
       border-bottom:1px solid #e6dfd4;
     }
-
     .wrap{
       max-width:1100px;
       margin:0 auto;
       padding:24px;
     }
-
     h1{
       font-size:34px;
       line-height:1.1;
       margin:16px 0;
     }
-
     h2{
       margin-top:40px;
       color:#1f7a3a;
     }
-
     p{
       max-width:75ch;
     }
+    .hero{
+      padding:40px 0;
+    }
+    .pill{
+      display:inline-block;
+      padding:6px 14px;
+      border-radius:999px;
+      background:#ffffff;
+      border:1px solid #e6dfd4;
+      font-size:13px;
+      margin:4px 6px 0 0;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap:16px;
+      margin-top:20px;
+    }
+    .card{
+      background:#fbf6ef;
+      border:1px solid #e6dfd4;
+      border-radius:16px;
+      padding:16px;
+    }
+    footer{
+      margin-top:60px;
+      background:#fbf6ef;
+      border-top:1px solid #e6dfd4;
+    }
+    footer a{
+      color:#1a73e8;
+      text-decoration:none;
+      font-weight:600;
+    }
+    footer a:hover{
+      text-decoration:underline;
+    }
+    .footer-links{
+      font-size:14px;
+      margin-top:10px;
+    }
+    small{
+      color:#555;
+    }
+  </style>
+</head>
 
-    .he
+<body>
 
+<header>
+  <div class="wrap">
+    <strong>Bo’CitéArt</strong><br>
+    <small>Projet territorial & artistique</small>
+  </div>
+</header>
 
+<main class="wrap">
 
+  <section class="hero">
+    <h1>Relier les forces d’une ville<br>pour redonner envie de vivre le local.</h1>
 
+    <p>
+      Bo’CitéArt est un projet territorial, culturel et citoyen.
+      Il vise à relier habitants, commerces, écoles, associations et collectivités
+      dans un cadre structuré, non partisan et orienté utilité réelle.
+    </p>
 
+    <div>
+      <span class="pill">Projet territorial</span>
+      <span class="pill">Art & culture</span>
+      <span class="pill">Citoyenneté</span>
+      <span class="pill">Commerce local</span>
+      <span class="pill">Cadre structuré</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>La vision</h2>
+    <p>
+      Une ville que l’on regarde autrement est une ville que l’on respecte davantage.
+      Bo’CitéArt agit comme un cadre commun, lisible et durable,
+      pour rendre visibles les dynamiques locales existantes
+      et recréer un sentiment d’appartenance collective.
+    </p>
+  </section>
+
+  <section>
+    <h2>Accès direct</h2>
+    <div class="grid">
+      <div class="card"><strong>Mentions légales</strong><br><a href="mentions-legales.html">Ouvrir</a></div>
+      <div class="card"><strong>RGPD</strong><br><a href="rgpd.html">Ouvrir</a></div>
+      <div class="card"><strong>CGU</strong><br><a href="cgu.html">Ouvrir</a></div>
+      <div class="card"><strong>CGV</strong><br><a href="cgv.html">Ouvrir</a></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Bo’CitéArt</strong><br>
+    <small>Réinventer la ville, ensemble</small>
+
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a> •
+      <a href="rgpd.html">Politique de confidentialité (RGPD)</a> •
+      <a href="cgu.html">CGU</a> •
+      <a href="cgv.html">CGV</a>
+    </div>
+
+    <p style="font-size:12px;margin-top:8px;">© 2026 — Tous droits réservés</p>
+  </div>
+</footer>
+
+</body>
+</html>
